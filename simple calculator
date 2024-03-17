@@ -1,0 +1,55 @@
+# calculator
+
+# the function add two numbers
+def add(x,y):
+    return x + y
+
+# the function subtracts two number
+def subtracts(x,y):
+    return x - y
+
+# the function multiplies two number
+def mul(x,y):
+    return x * y
+
+# the function divides two numbers
+def divides(x,y):
+    return x/y
+
+print('select operation ')
+print('1. add')
+print('2. subtracts')
+print('3 . multiply')
+print('4 . divide')
+while True :
+    # take input form the user
+    choice = input('enter you number (1/2/3/4) :')
+
+    # check if choice is one of the options
+    if choice in ('1','2','3','4'):
+        num1 = float(input('enter first number :'))
+        num2 = float(input('enter second number :'))
+
+        if  choice == '1':
+            a = num1+num2
+            print(a)
+
+        elif choice == '2':
+            b = num1 - num2
+            print(b)
+
+        elif choice == '3':
+            c = num1 * num2
+            print(c)
+
+        elif choice == '4':
+            d = num1 / num2
+            print(d)
+
+        # check if user wants another calculation
+        # break the while loop if answer  no
+        next_calculation = input('let do next calculation? (yes/no)')
+        if next_calculation == 'no':
+            break
+    else:
+        print('invalid input')
